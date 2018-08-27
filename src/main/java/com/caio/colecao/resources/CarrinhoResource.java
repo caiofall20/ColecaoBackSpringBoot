@@ -38,7 +38,7 @@ public class CarrinhoResource {
 		return ResponseEntity.created(uri).build();
 	}
 	@CrossOrigin(origins = {"http://localhost:8100","http://localhost:8080"})
-	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<Void> update(@RequestBody Carrinho obj, @PathVariable Integer id) {
 		obj.setId(id);
 		obj = service.update(obj);
